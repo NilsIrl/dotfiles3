@@ -1,5 +1,6 @@
-/.config/nvim/pack
-/.cache
-/.password-store
-/.local
+/.config/nvim/pack/
+/.cache/
+/.password-store/
+/.local/
+/.nix-defexpr/
 /.nix-profile
