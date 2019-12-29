@@ -3,3 +3,8 @@ set show-mode-in-prompt on
 set vi-ins-mode-string \1\e[6 q\2
 set vi-cmd-mode-string \1\e[2 q\2
 set keyseq-timeout 0
+
+set keymap vi
+
+"j": history-search-forward
+"k": history-search-backward
