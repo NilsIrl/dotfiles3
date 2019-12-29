@@ -13,6 +13,8 @@ function! PackInit() abort
 	call minpac#add('rust-lang/rust.vim')
 	call minpac#add('LnL7/vim-nix')
 
+	call minpac#add('tpope/vim-surround')
+
 	call minpac#add('norcalli/nvim-colorizer.lua', {'type': 'opt'})
 endfunction
 
