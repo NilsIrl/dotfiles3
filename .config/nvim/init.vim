@@ -2,6 +2,7 @@ set termguicolors
 colorscheme gruvbox
 
 set mouse=a
+set number relativenumber
 
 nnoremap <silent> Y y$
 set inccommand=nosplit
