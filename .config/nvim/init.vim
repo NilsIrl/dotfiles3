@@ -20,6 +20,7 @@ function! PackInit() abort
 
 	call minpac#add('christoomey/vim-tmux-navigator')
 	call minpac#add('tpope/vim-surround')
+	call minpac#add('tpope/vim-repeat')
 
 	call minpac#add('norcalli/nvim-colorizer.lua', {'type': 'opt'})
 endfunction
