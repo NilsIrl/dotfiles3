@@ -2,6 +2,8 @@ set termguicolors
 set mouse=a
 colorscheme gruvbox
 
+nnoremap <silent> Y y$
+
 function! PackInit() abort
 	packadd minpac
 	call minpac#init()
