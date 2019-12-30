@@ -23,6 +23,8 @@ function! PackInit() abort
 	call minpac#add('tpope/vim-repeat')
 
 	call minpac#add('norcalli/nvim-colorizer.lua', {'type': 'opt'})
+
+	call minpac#add('lifepillar/vim-mucomplete')
 endfunction
 
 " minpac
@@ -44,3 +46,8 @@ nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
+
+" MUcomplete
+
+let g:mucomplete#enable_auto_at_startup = 1
+set completeopt+=noselect
