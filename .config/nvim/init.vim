@@ -1,8 +1,10 @@
 set termguicolors
-set mouse=a
 colorscheme gruvbox
 
+set mouse=a
+
 nnoremap <silent> Y y$
+set inccommand=nosplit
 
 function! PackInit() abort
 	packadd minpac
