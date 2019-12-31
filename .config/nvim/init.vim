@@ -50,4 +50,5 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 " MUcomplete
 
 let g:mucomplete#enable_auto_at_startup = 1
-set completeopt+=noselect
+set completeopt+=menuone,noselect
+set shortmess+=c
