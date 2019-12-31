@@ -18,6 +18,9 @@ function! PackInit() abort
 	call minpac#add('rust-lang/rust.vim')
 	call minpac#add('LnL7/vim-nix')
 
+	call minpac#add('junegunn/fzf', {'do': {-> system('./install --all')}})
+	call minpac#add('junegunn/fzf.vim')
+
 	call minpac#add('christoomey/vim-tmux-navigator')
 	call minpac#add('tpope/vim-surround')
 	call minpac#add('tpope/vim-repeat')
@@ -49,6 +52,11 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 
 " MUcomplete
 
-let g:mucomplete#enable_auto_at_startup = 1
+" let g:mucomplete#enable_auto_at_startup = 1
 set completeopt+=menuone,noselect
 set shortmess+=c
+
+" FZF
+
+autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+nnoremap <leader>nf :Files<CR>
