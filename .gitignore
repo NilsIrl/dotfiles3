@@ -4,3 +4,4 @@
 /.local/
 /.nix-defexpr/
 /.nix-profile
+/.fzf.bash
