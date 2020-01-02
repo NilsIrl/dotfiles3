@@ -18,6 +18,8 @@ function! PackInit() abort
 	call minpac#add('rust-lang/rust.vim')
 	call minpac#add('LnL7/vim-nix')
 
+	call minpac#add('glacambre/firenvim', { 'type': 'opt', 'do': 'packadd firenvim | call firenvim#install(0)'})
+
 	call minpac#add('junegunn/fzf', {'do': {-> system('./install --all')}})
 	call minpac#add('junegunn/fzf.vim')
 
@@ -52,3 +54,9 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 
 autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 nnoremap <leader>nf :Files<CR>
+
+" firenvim
+
+if exists('g:started_by_firenvim')
+	packadd firenvim
+endif
