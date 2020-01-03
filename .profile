@@ -7,3 +7,4 @@ mkdir -p "$XDG_DATA_HOME"/bash
 export HISTFILE="$XDG_DATA_HOME"/bash/history
 
 export VISUAL=nvim
+export RUSTC_WRAPPER=sccache
