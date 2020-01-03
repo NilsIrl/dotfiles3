@@ -36,6 +36,10 @@ command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac
 command! PackClean call PackInit() | call minpac#clean()
 command! PackStatus call PackInit() | call minpac#status()
 
+" rust.vim
+
+let g:rustfmt_autosave = 1
+
 " nvim-colorizer.lua
 
 packadd nvim-colorizer.lua
