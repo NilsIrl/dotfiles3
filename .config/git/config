@@ -1,3 +1,7 @@
 [user]
 	email = nils@nilsand.re
 	name = Nils André-Chang
+[commit]
+	verbose = true
+[merge]
+	conflictstyle = diff3
