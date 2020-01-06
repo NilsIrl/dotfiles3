@@ -63,4 +63,5 @@ nnoremap <leader>nf :Files<CR>
 
 if exists('g:started_by_firenvim')
 	packadd firenvim
+	set laststatus=0
 endif
