@@ -17,8 +17,9 @@ set $term alacritty
 # Note: it's recommended that you pass the final command to sway
 set $menu bemenu-run
 
+set $reboot systemctl reboot
+set $shutdown systemctl poweroff
 set $suspend systemctl suspend
-set $shutdown poweroff
 
 set $lock 'swaylock -f -c 000000'
 
@@ -177,7 +178,9 @@ bindsym $mod+r mode "resize"
 
 mode "shutdown" {
     bindsym l mode "default"; exec $suspend
-    bindsym s mode "default"; exec $shutdown
+    bindsym r exec $reboot
+    bindsym s exec $shutdown
+
     bindsym Escape mode "default"
 }
 bindsym $alt+f4 mode "shutdown"
