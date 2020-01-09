@@ -4,6 +4,8 @@ colorscheme gruvbox
 set mouse=a
 set number relativenumber
 
+set wildmode=longest:full
+
 nnoremap <silent> Y y$
 set inccommand=nosplit
 
