@@ -20,16 +20,19 @@ set $menu bemenu-run
 set $suspend systemctl suspend
 set $shutdown poweroff
 
+set $lock 'swaylock -f -c 000000'
+
 xwayland disabled
 
 ### Idle configuration
 #
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' \
+         timeout 300 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         timeout 600 $lock \
+         timeout 900 $suspend \
+         before-sleep $lock
 
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enabled
 
