@@ -66,4 +66,5 @@ nnoremap <leader>nf :Files<CR>
 if exists('g:started_by_firenvim')
 	packadd firenvim
 	set laststatus=0
+	autocmd BufEnter github.com_*.txt set filetype=markdown
 endif
