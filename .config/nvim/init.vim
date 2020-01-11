@@ -67,4 +67,5 @@ if exists('g:started_by_firenvim')
 	packadd firenvim
 	set laststatus=0
 	autocmd BufEnter github.com_*.txt set filetype=markdown
+	nnoremap <expr> <Esc> firenvim#focus_page()
 endif
