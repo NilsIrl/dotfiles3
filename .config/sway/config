@@ -42,6 +42,11 @@ input * {
 	xkb_options caps:swapescape
 }
 
+output {
+	'Samsung Electric Company SyncMaster 0x00007E30' position 920 0
+	'Iiyama North America PL3490WQ 0x00000118' position 0 900
+}
+
 ### Key bindings
 #
 # Basics:
