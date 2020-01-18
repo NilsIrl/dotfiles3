@@ -20,16 +20,20 @@ function! PackInit() abort
 	call minpac#add('rust-lang/rust.vim')
 	call minpac#add('LnL7/vim-nix')
 
-	call minpac#add('glacambre/firenvim', { 'type': 'opt', 'do': 'packadd firenvim | call firenvim#install(0)'})
-
 	call minpac#add('junegunn/fzf', {'do': {-> system('./install --all')}})
 	call minpac#add('junegunn/fzf.vim')
 
 	call minpac#add('christoomey/vim-tmux-navigator')
+	call minpac#add('glacambre/firenvim', { 'type': 'opt', 'do': 'packadd firenvim | call firenvim#install(0)'})
+
 	call minpac#add('tpope/vim-surround')
 	call minpac#add('tpope/vim-repeat')
 
 	call minpac#add('norcalli/nvim-colorizer.lua', {'type': 'opt'})
+
+	call minpac#add('tpope/vim-fugitive')
+
+	call minpac#add('godlygeek/tabular')
 endfunction
 
 " minpac
