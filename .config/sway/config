@@ -17,9 +17,9 @@ set $term alacritty
 # Note: it's recommended that you pass the final command to sway
 set $menu bemenu-run
 
-set $reboot systemctl reboot
-set $shutdown systemctl poweroff
-set $suspend systemctl suspend
+set $reboot 'systemctl reboot'
+set $poweroff 'systemctl poweroff'
+set $suspend 'systemctl suspend'
 
 set $lock 'swaylock -f -c 000000'
 
@@ -29,11 +29,11 @@ xwayland disabled
 #
 #
 exec swayidle -w \
-         timeout 300 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         timeout 600 $lock \
-         timeout 900 $suspend \
-         before-sleep $lock
+	timeout 300 'swaymsg "output * dpms off"' \
+		resume 'swaymsg "output * dpms on"' \
+	timeout 600 $lock \
+	timeout 900 $suspend \
+	before-sleep $lock
 
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enabled
 
