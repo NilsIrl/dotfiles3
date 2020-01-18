@@ -230,4 +230,5 @@ for_window [app_id="dropdown_term"] {
 }
 bindsym $mod+q exec sh -c 'swaymsg [app_id="dropdown_term"] scratchpad show || exec $term --class dropdown_term'
 
+bindsym $mod+Escape exec makoctl dismiss
 exec mako
