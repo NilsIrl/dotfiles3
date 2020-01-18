@@ -9,6 +9,8 @@ set wildmode=longest:full
 nnoremap <silent> Y y$
 set inccommand=nosplit
 
+set undofile
+
 function! PackInit() abort
 	packadd minpac
 	call minpac#init()
