@@ -65,7 +65,8 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 " FZF
 
 autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-nnoremap <leader>nf :Files<CR>
+nnoremap <Leader>nf :Files<CR>
+nnoremap <Leader>nt :Tags<CR>
 
 " firenvim
 
