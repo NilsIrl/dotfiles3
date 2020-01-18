@@ -191,11 +191,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "shutdown" {
-    bindsym l mode "default"; exec $suspend
-    bindsym r exec $reboot
-    bindsym s exec $shutdown
+	bindsym l mode "default"; exec $lock
+	bindsym p exec $poweroff
+	bindsym r exec $reboot
+	bindsym s mode "default"; exec $suspend
 
-    bindsym Escape mode "default"
+	bindsym Escape mode "default"
 }
 bindsym $alt+f4 mode "shutdown"
 
