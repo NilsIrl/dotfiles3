@@ -174,15 +174,15 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # Resizing containers:
 #
 mode "resize" {
-    bindsym $left resize shrink width 5px
-    bindsym $down resize grow height 5px
-    bindsym $up resize shrink height 5px
-    bindsym $right resize grow width 5px
+	bindsym $left resize shrink width 10px
+	bindsym $down resize grow height 10px
+	bindsym $up resize shrink height 10px
+	bindsym $right resize grow width 10px
 
-    bindsym Shift+$left resize shrink width 30px
-    bindsym Shift+$down resize grow height 30px
-    bindsym Shift+$up resize shrink height 30px
-    bindsym Shift+$right resize grow width 30px
+	bindsym $alt+$left resize shrink width 40px
+	bindsym $alt+$down resize grow height 40px
+	bindsym $alt+$up resize shrink height 40px
+	bindsym $alt+$right resize grow width 40px
 
 	# Return to default mode
 	bindsym Return mode "default"
