@@ -57,6 +57,8 @@ exec swayidle -w \
 	timeout 900 $suspend \
 	before-sleep $lock
 
+for_window [app_id="firefox"] inhibit_idle fullscreen
+
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enabled
 
 input * {
