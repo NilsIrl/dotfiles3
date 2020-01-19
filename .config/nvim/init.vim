@@ -39,36 +39,6 @@ function! PackInit() abort
 	call minpac#add('godlygeek/tabular')
 endfunction
 
-" minpac
-
-command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
-command! PackClean call PackInit() | call minpac#clean()
-command! PackStatus call PackInit() | call minpac#status()
-
-" rust.vim
-
-let g:rustfmt_autosave = 1
-
-" nvim-colorizer.lua
-
-packadd nvim-colorizer.lua
-lua require 'colorizer'.setup()
-
-" vim-tmux-navigator
-
-let g:tmux_navitor_no_mappings = 1
-nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
-
-" FZF
-
-autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-nnoremap <Leader>nf :Files<CR>
-nnoremap <Leader>nt :Tags<CR>
-
 " firenvim
 
 if exists('g:started_by_firenvim')
@@ -77,3 +47,33 @@ if exists('g:started_by_firenvim')
 	autocmd BufEnter github.com_*.txt set filetype=markdown
 	nnoremap <expr> <Esc> firenvim#focus_page()
 endif
+
+" FZF
+
+autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+nnoremap <Leader>nf :Files<CR>
+nnoremap <Leader>nt :Tags<CR>
+
+" minpac
+
+command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean call PackInit() | call minpac#clean()
+command! PackStatus call PackInit() | call minpac#status()
+
+" nvim-colorizer.lua
+
+packadd nvim-colorizer.lua
+lua require 'colorizer'.setup()
+
+" rust.vim
+
+let g:rustfmt_autosave = 1
+
+" vim-tmux-navigator
+
+let g:tmux_navitor_no_mappings = 1
+nnoremap <silent> <M-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <M-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <M-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <M-l> :TmuxNavigateRight<CR>
+nnoremap <silent> <M-\> :TmuxNavigatePrevious<CR>
