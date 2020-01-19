@@ -23,6 +23,28 @@ set $suspend 'systemctl suspend'
 
 set $lock 'swaylock -f -c 000000'
 
+set $pws0 'P0'
+set $pws1 'P1'
+set $pws2 'P2'
+set $pws3 'P3'
+set $pws4 'P4'
+set $pws5 'P5'
+set $pws6 'P6'
+set $pws7 'P7'
+set $pws8 'P8'
+set $pws9 'P9'
+
+set $sws0 'S0'
+set $sws1 'S1'
+set $sws2 'S2'
+set $sws3 'S3'
+set $sws4 'S4'
+set $sws5 'S5'
+set $sws6 'S6'
+set $sws7 'S7'
+set $sws8 'S8'
+set $sws9 'S9'
+
 xwayland disabled
 
 ### Idle configuration
@@ -99,32 +121,75 @@ bindsym $mod+Shift+$alt+$up move up 40px
 bindsym $mod+Shift+$alt+$right move right 40px
 #
 # Workspaces:
-#
+
+workspace $pws0 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws1 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws2 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws3 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws4 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws5 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws6 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws7 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws8 output 'Iiyama North America PL3490WQ 0x00000118'
+workspace $pws9 output 'Iiyama North America PL3490WQ 0x00000118'
+
+workspace $sws0 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws1 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws2 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws3 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws4 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws5 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws6 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws7 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws8 output 'Samsung Electric Company SyncMaster 0x00007E30'
+workspace $sws9 output 'Samsung Electric Company SyncMaster 0x00007E30'
+
 # Switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-# Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
-#
+bindsym $mod+0 workspace $pws0
+bindsym $mod+1 workspace $pws1
+bindsym $mod+2 workspace $pws2
+bindsym $mod+3 workspace $pws3
+bindsym $mod+4 workspace $pws4
+bindsym $mod+5 workspace $pws5
+bindsym $mod+6 workspace $pws6
+bindsym $mod+7 workspace $pws7
+bindsym $mod+8 workspace $pws8
+bindsym $mod+9 workspace $pws9
+
+bindsym $mod+$alt+0 workspace $sws0
+bindsym $mod+$alt+1 workspace $sws1
+bindsym $mod+$alt+2 workspace $sws2
+bindsym $mod+$alt+3 workspace $sws3
+bindsym $mod+$alt+4 workspace $sws4
+bindsym $mod+$alt+5 workspace $sws5
+bindsym $mod+$alt+6 workspace $sws6
+bindsym $mod+$alt+7 workspace $sws7
+bindsym $mod+$alt+8 workspace $sws8
+bindsym $mod+$alt+9 workspace $sws9
+
+# Move focused container$pws1 to workspace
+bindsym $mod+Shift+0 move container to workspace $pws0
+bindsym $mod+Shift+1 move container to workspace $pws1
+bindsym $mod+Shift+2 move container to workspace $pws2
+bindsym $mod+Shift+3 move container to workspace $pws3
+bindsym $mod+Shift+4 move container to workspace $pws4
+bindsym $mod+Shift+5 move container to workspace $pws5
+bindsym $mod+Shift+6 move container to workspace $pws6
+bindsym $mod+Shift+7 move container to workspace $pws7
+bindsym $mod+Shift+8 move container to workspace $pws8
+bindsym $mod+Shift+9 move container to workspace $pws9
+
+bindsym $mod+Shift+$alt+0 move container to workspace $sws0
+bindsym $mod+Shift+$alt+1 move container to workspace $sws1
+bindsym $mod+Shift+$alt+2 move container to workspace $sws2
+bindsym $mod+Shift+$alt+3 move container to workspace $sws3
+bindsym $mod+Shift+$alt+4 move container to workspace $sws4
+bindsym $mod+Shift+$alt+5 move container to workspace $sws5
+bindsym $mod+Shift+$alt+6 move container to workspace $sws6
+bindsym $mod+Shift+$alt+7 move container to workspace $sws7
+bindsym $mod+Shift+$alt+8 move container to workspace $sws8
+bindsym $mod+Shift+$alt+9 move container to workspace $sws9
+
 # Layout stuff:
 #
 # You can "split" the current object of your focus with
