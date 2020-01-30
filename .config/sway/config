@@ -267,6 +267,8 @@ mode "shutdown" {
 }
 bindsym $alt+f4 mode "shutdown"
 
+bindsym $mod+Shift+s exec ~/.config/sway/screenshot.sh
+
 #
 # Status Bar:
 #
