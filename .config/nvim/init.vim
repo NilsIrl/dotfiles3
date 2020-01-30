@@ -25,6 +25,7 @@ function! PackInit() abort
 	call minpac#add('junegunn/fzf', {'do': {-> system('./install --all')}})
 	call minpac#add('junegunn/fzf.vim')
 
+	call minpac#add('jeffkreeftmeijer/vim-numbertoggle')
 	call minpac#add('christoomey/vim-tmux-navigator')
 	call minpac#add('glacambre/firenvim', { 'type': 'opt', 'do': 'packadd firenvim | call firenvim#install(0)'})
 
