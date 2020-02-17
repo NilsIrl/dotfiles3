@@ -43,10 +43,18 @@ endfunction
 " firenvim
 
 if exists('g:started_by_firenvim')
-	packadd firenvim
+	let g:firenvim_config = {
+				\ 'localSettings': {
+				\ 	'.*': {
+				\ 		'selector': 'textarea',
+				\ 		'priority': 0
+				\ 	}
+				\ }
+			\ }
 	set laststatus=0
 	autocmd BufEnter github.com_*.txt set filetype=markdown
 	nnoremap <expr> <Esc> firenvim#focus_page()
+	packadd firenvim
 endif
 
 " FZF
