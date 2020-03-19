@@ -17,3 +17,4 @@ export VISUAL=nvim
 export RUSTC_WRAPPER=sccache
 [ -n "$BASH_VERSION" -a -f "$HOME"/.bashrc ] && . "$HOME"/.bashrc
 
+[ -z "$WAYLAND_DISPLAY" -a "$(tty)" = '/dev/tty1' ] && exec sway
