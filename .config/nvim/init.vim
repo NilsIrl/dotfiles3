@@ -53,6 +53,7 @@ if exists('g:started_by_firenvim')
 			\ }
 	set laststatus=0
 	autocmd BufEnter github.com_*.txt set filetype=markdown
+	autocmd BufEnter play.rust-lang.org_*.txt set filetype=rust
 	nnoremap <expr> <Esc> firenvim#focus_page()
 	packadd firenvim
 endif
