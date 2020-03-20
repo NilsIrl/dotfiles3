@@ -233,12 +233,12 @@ bindsym $mod+minus scratchpad show
 
 bindsym $mod+equal sticky toggle
 
-exec mkfifo "$SWAYSOCK".volume.wob && tail -f "$SWAYSOCK".volume.wob | wob
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1% && ~/.config/sway/get_volume.sh > "$SWAYSOCK".volume.wob
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1% && ~/.config/sway/get_volume.sh > "$SWAYSOCK".volume.wob
-bindsym $alt+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +4% && ~/.config/sway/get_volume.sh > "$SWAYSOCK".volume.wob
-bindsym $alt+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -4% && ~/.config/sway/get_volume.sh > "$SWAYSOCK".volume.wob
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && ~/.config/sway/get_volume.sh > "$SWAYSOCK".volume.wob
+exec ~/.config/sway/wob_volume.sh
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym $alt+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +4%
+bindsym $alt+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -4%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 #
 # Resizing containers:
