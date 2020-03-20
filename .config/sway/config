@@ -117,10 +117,10 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-bindsym $mod+Shift+$alt+$left move left 40px
-bindsym $mod+Shift+$alt+$down move down 40px
-bindsym $mod+Shift+$alt+$up move up 40px
-bindsym $mod+Shift+$alt+$right move right 40px
+bindsym $mod+Shift+$alt+$left move left 80px
+bindsym $mod+Shift+$alt+$down move down 80px
+bindsym $mod+Shift+$alt+$up move up 80px
+bindsym $mod+Shift+$alt+$right move right 80px
 #
 # Workspaces:
 
