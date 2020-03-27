@@ -13,6 +13,10 @@ export GDBHISTFILE="$XDG_DATA_HOME"/gdb/history
 
 export MAILCAPS="$XDG_CONFIG_HOME"/mailcap
 
+export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
+
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+
 export VISUAL=nvim
 export RUSTC_WRAPPER=sccache
 
