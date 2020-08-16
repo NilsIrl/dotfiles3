@@ -5,3 +5,5 @@
 	verbose = true
 [merge]
 	conflictstyle = diff3
+[core]
+	excludesfile = /home/nils/.config/git/gitignore
