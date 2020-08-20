@@ -1,4 +1,4 @@
-# XDG Base Directory non-complient programs
+# XDG Base Directory non-compliant programs
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
 
