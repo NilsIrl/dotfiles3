@@ -18,9 +18,11 @@ export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 export VISUAL=nvim
+export EDITOR=$VISUAL
 export RUSTC_WRAPPER=sccache
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 [ -n "$BASH_VERSION" -a -f "$HOME"/.bashrc ] && . "$HOME"/.bashrc
 
