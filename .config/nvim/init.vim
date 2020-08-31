@@ -35,14 +35,23 @@ function! PackInit() abort
 	call minpac#add('tpope/vim-surround')
 	call minpac#add('tpope/vim-repeat')
 
+	call minpac#add('easymotion/vim-easymotion')
+
+	call minpac#add('mbbill/undotree')
+
 	call minpac#add('norcalli/nvim-colorizer.lua', {'type': 'opt'})
 
 	call minpac#add('tpope/vim-fugitive')
 	call minpac#add('tpope/vim-rhubarb')
 
 	call minpac#add('SirVer/ultisnips')
+
 	call minpac#add('godlygeek/tabular')
 endfunction
+
+" easymotion
+
+map <Leader>f <Plug>(easymotion-bd-f)
 
 " firenvim
 
