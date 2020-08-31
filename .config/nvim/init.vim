@@ -65,8 +65,8 @@ endif
 " FZF
 
 autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-nnoremap <Leader>nf :Files<CR>
-nnoremap <Leader>nt :Tags<CR>
+nnoremap <Leader>nf <Cmd>Files<CR>
+nnoremap <Leader>ng <Cmd>GitFiles<CR>
 
 " minpac
 
@@ -86,8 +86,8 @@ let g:rustfmt_autosave = 1
 " vim-tmux-navigator
 
 let g:tmux_navitor_no_mappings = 1
-nnoremap <silent> <M-h> :TmuxNavigateLeft<CR>
-nnoremap <silent> <M-j> :TmuxNavigateDown<CR>
-nnoremap <silent> <M-k> :TmuxNavigateUp<CR>
-nnoremap <silent> <M-l> :TmuxNavigateRight<CR>
-nnoremap <silent> <M-\> :TmuxNavigatePrevious<CR>
+nnoremap <silent> <M-h> <Cmd>TmuxNavigateLeft<CR>
+nnoremap <silent> <M-j> <Cmd>TmuxNavigateDown<CR>
+nnoremap <silent> <M-k> <Cmd>TmuxNavigateUp<CR>
+nnoremap <silent> <M-l> <Cmd>TmuxNavigateRight<CR>
+nnoremap <silent> <M-\> <Cmd>TmuxNavigatePrevious<CR>
