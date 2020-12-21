@@ -140,12 +140,7 @@
 #      alias = "fuck --enable-experimental-instant-mode";
       enable = true;
     };
-    tmux = {
-      enable = true;
-      extraConfig = ''
-        source-file "$XDG_CONFIG_HOME"/tmux/tmux.conf
-      '';
-    };
+    tmux.enable = true;
   };
 
   # List services that you want to enable:
