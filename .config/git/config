@@ -5,3 +5,7 @@
 	verbose = true
 [merge]
 	conflictstyle = diff3
+[init]
+	defaultBranch = trunk
+[pull]
+	ff = only
