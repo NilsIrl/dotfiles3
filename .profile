@@ -11,6 +11,10 @@ export HISTFILE="$XDG_DATA_HOME"/bash/history
 mkdir -p "$XDG_DATA_HOME"/gdb
 export GDBHISTFILE="$XDG_DATA_HOME"/gdb/history
 
+mkdir -p "$XDG_DATA_HOME"/octave
+export OCTAVE_HISTFILE="$XDG_DATA_HOME"/octave/history
+export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME"/octave/octaverc
+
 export MAILCAPS="$XDG_CONFIG_HOME"/mailcap
 
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
