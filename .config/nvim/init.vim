@@ -44,6 +44,10 @@ function! PackInit() abort
 	call minpac#add('tpope/vim-fugitive')
 	call minpac#add('tpope/vim-rhubarb')
 
+	call minpac#add('neovim/nvim-lspconfig', {'type': 'opt'})
+	call minpac#add('nvim-lua/completion-nvim', {'type': 'opt'})
+	call minpac#add('nvim-treesitter/nvim-treesitter', {'type': 'opt', 'do': 'packadd nvim-treesitter | TSUpdate'})
+
 	call minpac#add('SirVer/ultisnips')
 
 	call minpac#add('godlygeek/tabular')
@@ -87,6 +91,35 @@ command! PackStatus call PackInit() | call minpac#status()
 
 packadd nvim-colorizer.lua
 lua require 'colorizer'.setup()
+
+" LSP
+
+packadd nvim-lspconfig
+lua require 'lspconfig'.rust_analyzer.setup{}
+lua require 'lspconfig'.texlab.setup{}
+lua require 'lspconfig'.clangd.setup{}
+
+packadd nvim-treesitter
+
+lua <<EOF
+require 'nvim-treesitter.configs'.setup {
+  ensure_installed = {"cpp", "rust", "json", "nix"},
+  highlight = {
+    enable = true
+  },
+  indent = {
+  	enable = true
+  }
+}
+EOF
+
+let g:completion_enable_snippet = 'UltiSnips'
+packadd completion-nvim
+autocmd BufEnter * lua require 'completion'.on_attach()
+
+nnoremap <silent> <C-]> <Cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <Cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> 1gD <Cmd>lua vim.lsp.buf.type_definition()<CR>
 
 " rust.vim
 
