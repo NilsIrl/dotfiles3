@@ -9,3 +9,5 @@ alias gdb='gdb --quiet -nh --command "$XDG_CONFIG_HOME"/.gdbinit'
 alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
 
 alias config='git --git-dir=$HOME/dotfiles3 --work-tree=$HOME'
+
+eval "$(direnv hook bash)"
