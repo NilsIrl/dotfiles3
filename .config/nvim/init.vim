@@ -1,7 +1,6 @@
 set termguicolors
 
 let g:gruvbox_italic=1
-set bg=light
 colorscheme gruvbox
 
 set mouse=a
