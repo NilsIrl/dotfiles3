@@ -92,6 +92,7 @@ endif
 autocmd! FileType fzf set laststatus=0 noruler noshowmode norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 nnoremap <Leader>nf <Cmd>Files<CR>
 nnoremap <Leader>ng <Cmd>GitFiles<CR>
+nnoremap <Leader>nt <Cmd>Tags<CR>
 
 " minpac
 
