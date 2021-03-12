@@ -57,18 +57,6 @@
   # Set your time zone.
   time.timeZone = "Europe/London";
 
-  nixpkgs.config.packageOverrides = pkgs:
-  {
-    neovim-unwrapped = pkgs.neovim-unwrapped.overrideAttrs (oldAttrs: {
-      src = /home/nils/Documents/github.com/neovim/neovim;
-    });
-    kernel = pkgs.kernel.override {
-      extraConfig = ''
-          KGDB y
-        '';
-    };
-  };
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [
@@ -78,7 +66,6 @@
     pkgs.neomutt
     pkgs.isync
 
-    pkgs.neovim
     pkgs.newsboat
 
     (pkgs.pass.withExtensions( exts: [ exts.pass-otp ] ))
