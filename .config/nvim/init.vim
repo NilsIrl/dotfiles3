@@ -24,6 +24,9 @@ function! PackInit() abort
 
 	call minpac#add('rust-lang/rust.vim')
 	call minpac#add('LnL7/vim-nix')
+	call minpac#add('cespare/vim-toml')
+
+	call minpac#add('editorconfig/editorconfig-vim')
 
 	call minpac#add('junegunn/fzf', {'do': {-> system('./install --all')}})
 	call minpac#add('junegunn/fzf.vim')
