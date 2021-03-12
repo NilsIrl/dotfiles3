@@ -17,6 +17,10 @@ set undofile
 set completeopt+=menuone,noinsert,noselect
 set shortmess+=c
 
+set tabstop=4 shiftwidth=4 expandtab
+
+set hidden
+
 function! PackInit() abort
 	packadd minpac
 	call minpac#init()
