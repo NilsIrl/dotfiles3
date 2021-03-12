@@ -22,8 +22,7 @@
   # Use the systemd-boot EFI boot loader.
   boot = {
     cleanTmpDir = true;
-    kernelPackages = pkgs.linuxPackages_latest;
-    #extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+    extraModulePackages = [ config.boot.kernelPackages.wireguard ];
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot.enable = true;
