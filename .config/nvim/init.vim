@@ -45,6 +45,7 @@ function! PackInit() abort
 
 	call minpac#add('tpope/vim-surround')
 	call minpac#add('tpope/vim-repeat')
+	call minpac#add('tpope/vim-unimpaired')
 
 	call minpac#add('easymotion/vim-easymotion')
 
