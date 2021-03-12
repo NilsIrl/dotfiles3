@@ -14,6 +14,9 @@ set inccommand=nosplit
 
 set undofile
 
+set completeopt+=menuone,noinsert,noselect
+set shortmess+=c
+
 function! PackInit() abort
 	packadd minpac
 	call minpac#init()
