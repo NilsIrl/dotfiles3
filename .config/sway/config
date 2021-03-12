@@ -255,13 +255,13 @@ bar {
 
 for_window [app_id="dropdown_math"] {
 	move scratchpad
-	scratchpad show
+	[app_id="^dropdown_math$"] scratchpad show
 }
 bindsym --to-code $mod+m exec sh -c 'swaymsg [app_id="^dropdown_math$"] scratchpad show || exec $term --class dropdown_math -e ipython'
 
 for_window [app_id="dropdown_term"] {
 	move scratchpad
-	scratchpad show
+	[app_id="^dropdown_term$"] scratchpad show
 }
 bindsym --to-code $mod+q exec sh -c 'swaymsg [app_id="^dropdown_term$"] scratchpad show || exec $term --class dropdown_term'
 
