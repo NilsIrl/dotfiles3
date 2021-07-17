@@ -37,6 +37,7 @@ function! PackInit() abort
 
 	call minpac#add('mattn/emmet-vim')
 
+	call minpac#add('junegunn/fzf', {'do': {-> system('./install --all --xdg')}})
 	call minpac#add('junegunn/fzf.vim')
 
 	call minpac#add('jeffkreeftmeijer/vim-numbertoggle')
